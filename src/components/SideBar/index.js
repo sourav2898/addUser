@@ -3,8 +3,8 @@ import React from "react";
 import colors from "../assets/color";
 import { sideBarNavs } from "../assets/utils";
 
-const SideBar = () => {
-  const { lightGray, green, lightGreen, primary } = colors;
+const SideBar = ({ currentNav, changeNav }) => {
+  const { lightGray, green, primary, white } = colors;
 
   return (
     <Box
@@ -24,11 +24,14 @@ const SideBar = () => {
               sx={{
                 cursor: "pointer",
                 marginBottom: 1,
-                marginTop: 1,
-                padding: 2,
-                // backgroundColor: `${green}`,
+                paddingTop: 2,
+                paddingBottom: 2,
+                backgroundColor: `${
+                  value?.name === currentNav ? green : white
+                }`,
                 color: `${primary}`,
               }}
+              onClick={() => changeNav(value?.name)}
             >
               <ListItemText primary={value?.name} />
             </ListItem>

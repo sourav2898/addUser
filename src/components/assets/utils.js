@@ -1,8 +1,10 @@
+import Settings from "../Settings";
+
 export const sideBarNavs = [
-  { name: "Products" },
-  { name: "Demo Scripts" },
-  { name: "Customers" },
-  { name: "Sales team" },
-  { name: "Demos" },
-  { name: "Settings" },
+  { name: "Products", render: <></> },
+  { name: "Demo Scripts", render: <></> },
+  { name: "Customers", render: <></> },
+  { name: "Sales team", render: <></> },
+  { name: "Demos", render: <></> },
+  { name: "Settings", render: <Settings /> },
 ];
