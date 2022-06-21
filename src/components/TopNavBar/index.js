@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import { Avatar } from "@mui/material";
 import pic from ".././assets/images/logo.jpg";
@@ -11,15 +10,17 @@ import colors from "../assets/color";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const TopNavBar = () => {
+  const { lightGray, primary, white } = colors;
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
         sx={{
-          backgroundColor: colors.white,
-          color: colors.primary,
+          backgroundColor: white,
+          color: primary,
           boxShadow: "none",
-          borderBottom: `1px solid ${colors.lightGray}`,
+          borderBottom: `1px solid ${lightGray}`,
         }}
       >
         <Toolbar>
@@ -47,7 +48,7 @@ const TopNavBar = () => {
               variant="h6"
               component="div"
               sx={{
-                borderLeft: `1px solid ${colors.lightGray}`,
+                borderLeft: `1px solid ${lightGray}`,
               }}
             >
               MY APPLICATION
@@ -55,7 +56,7 @@ const TopNavBar = () => {
             <ArrowDropDownIcon
               sx={{
                 paddingRight: 10,
-                borderRight: `1px solid ${colors.lightGray}`,
+                borderRight: `1px solid ${lightGray}`,
               }}
             />
           </Box>
@@ -67,10 +68,10 @@ const TopNavBar = () => {
               flexWrap: "wrap",
               justifyContent: "space-around",
               alignItems: "center",
-              borderLeft: `1px solid ${colors.lightGray}`,
+              borderLeft: `1px solid ${lightGray}`,
             }}
           >
-            <Avatar alt="Sourav" />
+            <Avatar />
             <Typography pl={1} pr={1} variant="h6" component="div">
               Sourav kumar
             </Typography>

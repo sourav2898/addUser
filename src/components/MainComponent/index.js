@@ -1,7 +1,7 @@
 import React from "react";
 
-const Main = () => {
-  return <div>Main</div>;
+const MainComp = () => {
+  return <div>MainComp</div>;
 };
 
-export default Main;
+export default MainComp;
